@@ -1,0 +1,47 @@
+.top-news-heading h1{
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    margin: 0px;
+    padding: 10px 10px;
+}
+.sub-heading span{
+    font-size: 10px;
+}
+.all-related-news-heading{
+    background: #dc3545;
+    color: #FFFFFF;
+    position: relative;
+    left: 15px;
+    margin-bottom: 20px;
+}
+.all-related-news-heading h2{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: 8px;
+}
+.all-related-news-details{
+}
+.related-news{}
+.related-news-heading{
+    margin-top: 10px;
+}
+.related-news-heading h4{
+    border-bottom: 2px solid #dc3545;
+}
+.related-news-heading span{
+    font-size: 20px;
+    color: #716c6c;
+}
+.related-news-body button{
+    position: absolute;
+    right: 10px;
+}
+.all-related-news{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.all-related-news img{
+    width: 100%;
+}

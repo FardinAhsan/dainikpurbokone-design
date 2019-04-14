@@ -1,0 +1,165 @@
+
+
+//menu html
+<div class="menu" id="navbar">
+            <div class="row col-12 col-md-12 col-sm-12 col-xs-12">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#"><i class="icon-home"></i></a></li>
+                        <li><a href="#">প্রথম পাতা</a></li>
+                        <li><a href="#">স্থানীয়-২</a></li>
+                        <li><a href="#">মহানগর</a></li>
+                        <li><a href="#">সম্পাদকীয়</a></li>
+                        <li><a href="#">জেলা-উপজেলা-গ্রাম</a></li>
+                        <li><a href="#">অর্থনীতি</a></li>
+                        <li><a href="#">আন্তর্জাতিক</a></li>
+                        <li><a href="#">বিনোদন</a></li>
+                        <li><a href="#">খেলাধুলা</a></li>
+                        <li><a href="#">স্থানীয় -১০</a></li>
+                        <li><a href="#">শেষ পাতা</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar text-right">
+                    <form action="#">
+                        <ul class="searchSection">
+                            <li class="search_icon">
+                                <i class="icon-search"></i>
+                            </li>
+                            <li class="search_input">
+                                <input type="search" name="search" id="search_box">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+</div>
+//menu html
+
+
+//css menu//
+
+.menu{
+    background: #dc3545;
+    min-height: 50px;
+}
+.menu .nav{
+    position: relative;
+    left: 60px;
+    top: 15px;
+}
+.menu .nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu .nav ul li{
+    display: inline-block;
+}
+.menu .nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    position: relative;
+    top: -3px;
+
+}
+.menu .nav ul li a:hover{
+    background: #ffffff;
+    color: #dc3545;
+}
+
+.menu.search-bar{
+    height: 100%;
+}
+
+.menu .search-bar ul{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 8px;
+    left: 65px;
+}
+
+
+.menu .search-bar ul li.search_icon{
+    text-align: right;
+}
+
+.menu .search-bar li.search_icon i {
+    color: #fff;
+    font-size: 14px;
+    background-color: #333333;
+    padding: 10px 10px;
+    border-radius: 100%;
+    position: absolute;
+    cursor: pointer;transition: all .3s ease-in-out;
+}
+.menu .search-bar li.search_icon i:hover{
+    background: #fff;
+    color: #dc3545;
+}
+.menu .search-bar li.search_input {
+    position: absolute;
+    left: -363px;
+    top: 42px;
+}
+
+.menu .search-bar input[type="search"] {
+    width: 450px;
+    min-height: 30px;
+    padding: 8px 12px;
+    border: 1px solid #dc3545;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    background-color: #333333;
+    /* visibility: hidden; */
+}
+
+.meun .search-bar input[type="search"]:focus{
+    outline: 1px solid transparent;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 82.3%;
+}
+
+.slicknav_menu {
+    display:none;
+}
+//css menu//
+
+//js menu//
+
+
+jQuery(document).ready(function(){
+        var search_box = jQuery("#search_box");
+        search_box.hide();
+
+        var search = jQuery(".searchSection");
+
+        jQuery(search)
+            .find('li.search_icon i')
+            .click(function(){
+                    jQuery(search).find("li.search_input input#search_box").toggle(600);
+                }
+            )
+
+    });
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    };
+//js menu//
